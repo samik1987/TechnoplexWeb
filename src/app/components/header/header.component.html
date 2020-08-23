@@ -1,0 +1,44 @@
+<nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
+  
+    <a class="navbar-brand" routerLink="/home">
+      <img src="../../../assets/images/logo.png" class="img-fluid">
+    </a>
+    <button class="navbar-toggler hamburger collapsed" type="button" (click)="toggleNavbar()" data-toggle="collapse" data-target="#mainManu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="ham1"></span>
+      <span class="ham2"></span>
+      <span class="ham3"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="mainManu" [ngClass]="{'hide' : navebarOpen}">
+      <ul class="navbar-nav ml-auto position-relative">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" data-toggle="collapse" routerLinkActive="active">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLinkActive="active">Courses</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" routerLink="/courses/UI" routerLinkActive="active">UI Design & Develop</a>
+            <a class="dropdown-item" routerLink="/courses/dot-net" routerLinkActive="active">Dot Net</a>
+            <a class="dropdown-item" routerLink="/courses/dot-net-core" routerLinkActive="active">Dot Net Core</a>
+            <a class="dropdown-item" routerLink="/courses/mvc" routerLinkActive="active">Dot-Net MVC</a>
+            <a class="dropdown-item" routerLink="/courses/angular" routerLinkActive="active">Angular</a>
+            <a class="dropdown-item" routerLink="/courses/data-base" routerLinkActive="active">Data base</a>
+            <a class="dropdown-item" routerLink="/courses/MsOffice" routerLinkActive="active">MS Office</a>
+            <a class="dropdown-item" routerLink="/courses/advance-excel" routerLinkActive="active">Advance Excel</a>
+            <a class="dropdown-item" routerLink="/courses/digital-marketing" routerLinkActive="active">Digital Marketing</a>
+          </div>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/blog" data-toggle="collapse" routerLinkActive="active">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+

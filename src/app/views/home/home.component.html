@@ -1,0 +1,351 @@
+<section class="pb-banner position-relative banner-bg">
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-6 ">
+                <div class="tag-line text-white">
+                    <p class="heading ">Welcome to Technoplex</p>
+                    <p class="h5">
+                        In 2011, We launched as a E-Learning Platform & IT Training institute in Kolkata. 
+                        We provide Online Corporate IT Training to Students and Professionals across the globe to 
+                        achieve their career goal. Also we provide career counseling to guide them to the  right 
+                        direction.
+                    </p>
+                </div>               
+            </div>
+
+            <div class="col-lg-6 pt-md-4 pt-sm-4 pt-xs-5 position-relative text-center">
+                <img class="img-fluid" alt="hero" src="assets/images/banner2.png">
+                <a type="button" class="btn btn-bannerPlay" data-toggle="modal" data-target="#staticBackdrop">
+                    <span class="wave"></span>
+                    <i class="fa fa-play"></i>                    
+                </a>
+            </div>
+        </div>
+        
+        <!-- slider Video -->
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+            role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <button type="button" class="close intro-close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                                        
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/jZPImEqvvjI?" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="water-wave">
+        <img class="img-fluid" src="assets/images/wave.svg">
+    </section>
+</section>
+
+<div class="w-100"></div>
+<!-------- Courses ---------->
+<section class="my-5 ">
+    <div class="container block-course">
+        <h1 class="block-header">Courses</h1>
+        <owl-carousel-o [options]="coursesSlider">
+            <ng-template carouselSlide>
+                <div class="card m-3 bg-secondary text-white text-center">
+                    <div class="course-logo">
+                        <img class="img-fluid" src="assets/images/.net.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title mb-0">Level : Beginner </h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-secondary ">Training Area: Asp.net, C#, MS Sql</li>
+                        <li class="list-group-item bg-secondary">Duration : 8 weeks</li>
+                        <li class="list-group-item bg-secondary">Classes : 2 Classes per week</li>
+                        <li class="list-group-item bg-secondary">Price : INR 4,000/-</li>
+                        <li class="list-group-item bg-secondary">Mode of Training : Online </li>
+                    </ul>
+                    <div class="text-right">
+                        <a routerLink="/courses/dot-net" routerLinkActive="active" class="btn btn-link">View Details</a>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="card m-3 bg-red text-white text-center">
+                    <div class="course-logo">
+                        <img class="img-fluid" src="assets/images/angular.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title mb-0">Level : Beginner</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-red">Training  Area: Module, Component, Data Binding, Routing, Form, Validation, etc.  </li>
+                        <li class="list-group-item bg-red">Duration : 8 weeks</li>
+                        <li class="list-group-item bg-red">Classes : 2 Classes per week</li>
+                        <li class="list-group-item bg-red">Price : INR 4,500/-</li>
+                        <li class="list-group-item bg-red">Mode of Training : Online </li>
+                    </ul>
+                    <div class="text-right">
+                        <a routerLink="/courses/angular" routerLinkActive="active" class="btn btn-link">View Details</a>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="card m-3 bg-info text-white text-center">
+                    <div class="course-logo">
+                        <img class="img-fluid" src="assets/images/mvc.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title mb-0">Level : Advance </h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-info">Training  Area: MVC, C#, LINQ/ EF </li>
+                        <li class="list-group-item bg-info">Duration : 8 weeks</li>
+                        <li class="list-group-item bg-info">Classes : 2 Classes per week</li>
+                        <li class="list-group-item bg-info">Price : INR 5,000/-</li>
+                        <li class="list-group-item bg-info">Mode of Training : Online </li>
+                    </ul>
+                    <div class="text-right">
+                        <a routerLink="/courses/mvc" routerLinkActive="active" class="btn btn-link">View Details</a>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="card m-3 bg-yellow text-white text-center">
+                    <div class="course-logo">
+                        <img class="img-fluid" src="assets/images/aspCore.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title mb-0">Level : Beginner </h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-yellow">Training  Area: .Net Core, C#, MS Sql.  </li>
+                        <li class="list-group-item bg-yellow">Duration : 8 weeks</li>
+                        <li class="list-group-item bg-yellow">Classes : 2 Classes per week</li>
+                        <li class="list-group-item bg-yellow">Price : INR 4,000/-</li>
+                        <li class="list-group-item bg-yellow">Mode of Training : Online </li>
+                    </ul>
+                    <div class="text-right">
+                        <a routerLink="/courses/dot-net-core" routerLinkActive="active" class="btn btn-link">View
+                            Details</a>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="card m-3 bg-light text-center">
+                    <div class="course-logo">
+                        <img class="img-fluid" src="assets/images/ui_ux.png" alt="UI/UX">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title mb-0">Level : Beginner </h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-light">Training  Area: HTML, CSS, Bootstrap, Photoshop, 
+                            Illusurator, XD.  </li>
+                        <li class="list-group-item bg-light">Duration : 8 weeks</li>
+                        <li class="list-group-item bg-light">Classes : 2 Classes per week</li>
+                        <li class="list-group-item bg-light">Price : INR 5,000/-</li>
+                        <li class="list-group-item bg-light">Mode of Training : Online </li>
+                    </ul>
+                    <div class="text-right">
+                        <a routerLink="/courses/UI" routerLinkActive="active" class="btn btn-link text-dark">View
+                            Details</a>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="card m-3 bg-dark text-white text-center">
+                    <div class="course-logo">
+                        <img class="img-fluid" src="assets/images/MsOffice.png" alt="MsOffice">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title mb-0">Level : Beginner </h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-dark text-white">Training  Area: Excel, Word, Power point </li>
+                        <li class="list-group-item bg-dark text-white">Duration : 8 weeks</li>
+                        <li class="list-group-item bg-dark text-white">Classes : 2 Classes per week</li>
+                        <li class="list-group-item bg-dark text-white">Price : INR 3,000/-</li>
+                        <li class="list-group-item bg-dark text-white">Mode of Training : Online </li>
+                    </ul>
+                    <div class="text-right">
+                        <a routerLink="/courses/MsOffice" routerLinkActive="active" class="btn btn-link text-white">View
+                            Details</a>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="card m-3 bg-theme text-white text-center">
+                    <div class="course-logo">
+                        <img class="img-fluid" src="assets/images/SQL.png" alt="Data Base">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title mb-0">Level : Advance </h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-theme text-white">Training  Area: Data Base </li>
+                        <li class="list-group-item bg-theme text-white">Duration : 6 weeks</li>
+                        <li class="list-group-item bg-theme text-white">Classes : 2 Classes per week</li>
+                        <li class="list-group-item bg-theme text-white">Price : INR 3,000/-</li>
+                        <li class="list-group-item bg-theme text-white">Mode of Training : Online </li>
+                    </ul>
+                    <div class="text-right">
+                        <a routerLink="/courses/data-base" routerLinkActive="active" class="btn btn-link text-white">View
+                            Details</a>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="card m-3 bg-green text-white text-center">
+                    <div class="course-logo">
+                        <img class="img-fluid" src="assets/images/excel.png" alt="MsExcel">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title mb-0">Level : Advanced </h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-green text-white">Training  Area: Advance formula,function, Pivot table, Chart & Reporting</li>
+                        <li class="list-group-item bg-green text-white">Duration : 8 weeks</li>
+                        <li class="list-group-item bg-green text-white">Classes : 2 Classes per week</li>
+                        <li class="list-group-item bg-green text-white">Price : INR 4,000/-</li>
+                        <li class="list-group-item bg-green text-white">Mode of Training : Online </li>
+                    </ul>
+                    <div class="text-right">
+                        <a routerLink="/courses/advance-excel" routerLinkActive="active" class="btn btn-link text-white">View
+                            Details</a>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="card m-3 bg-brown text-white text-center">
+                    <div class="course-logo">
+                        <img class="img-fluid" src="assets/images/dgital.png" alt="Digital Marketing">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title mb-0">Level : Beginner </h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-brown text-white">Training  Area: SEO, SMO, Youtube Marketing.. </li>
+                        <li class="list-group-item bg-brown text-white">Duration : 8 weeks</li>
+                        <li class="list-group-item bg-brown text-white">Classes : 2 Classes per week</li>
+                        <li class="list-group-item bg-brown text-white">Price : INR 3,500/-</li>
+                        <li class="list-group-item bg-brown text-white">Mode of Training : Online </li>
+                    </ul>
+                    <div class="text-right">
+                        <a routerLink="/courses/digital-marketing" routerLinkActive="active" class="btn btn-link text-white">View
+                            Details</a>
+                    </div>
+                </div>
+            </ng-template>
+        </owl-carousel-o>
+    </div>
+</section>
+
+<div class="w-100"></div>
+<!-------- About ---------->
+<section class="bg-theme my-2 py-5" id="about">
+    <app-about></app-about>
+</section>
+
+<div class="w-100"></div>
+<!-------- Our Team ---------->
+<section class="my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 my-md-0 ">
+                <h1 class="block-header mt-3">Our Team</h1>
+                <div class="row">
+                    <div class="col-6 col-sm-6 col-md-3 py-3 ">
+                        <div class="team">
+                            <div class="profile-container">
+                                <img class="rounded-circle img-fluid" src="../../../assets/images/Anika.jpg">
+                            </div>
+                            <h4 class="block-header text-theme ">Anika Tabassum Badhon</h4>
+                            <h6>Marketing Head (Bangladesh)</h6>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-3 py-3 ">
+                        <div class="team">
+                            <div class="profile-container">
+                                <img class="rounded-circle img-fluid" src="../../../assets/images/samik.jpg">
+                            </div>
+                            <h4 class="block-header text-theme">Samik Dam</h4>
+                            <h6>Sr. Software Developer</h6>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-3 py-3 ">
+                        <div class="team">
+                            <div class="profile-container">
+                                <img class="rounded-circle img-fluid" src="../../../assets/images/Tanoy.jpg">
+                            </div>
+                            <h4 class="block-header text-theme">Tanoy Samadder</h4>
+                            <h6>Software Developer</h6>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-3 py-3 ">
+                        <div class="team">
+                            <div class="profile-container">
+                                <img class="rounded-circle img-fluid" src="../../../assets/images/sujay.jpg">
+                            </div>
+                            <h4 class="block-header text-theme ">Sujay Shaw</h4>
+                            <h6>UI Developer</h6>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<div class="w-100"></div>
+
+<!-------- testimonial ---------->
+<section class="py-5  testimonial">
+    <div class="container">
+        
+        <div class="row justify-content-md-center">
+            <div class="col-12 col-md-12 col-lg-6 text-white text-center mb-5">
+                <h1 class="block-header">Student's Feedback</h1>
+                <div class="text-center">
+                    <owl-carousel-o [options]="testimonial">
+                        <ng-template carouselSlide>
+                            <div class="profile-container">
+                                <img class="rounded-circle img-fluid" src="../../../assets/images/avater.png">
+                            </div>                           
+                            <p class="feedback">
+                                "Technique is good to teach the student over online. Speech and behavior is very good. 
+                                Knowledge is good enough to work in the market as a developer on .Net and ASP.Net MVC. 
+                                He is very much sincere to solver the student's requirement. I think students need not 
+                                go to the Education Center. Do not hesitate to sit at home to read comfortably. 
+                                Samik Dam is the best."
+                            </p>
+                            <footer class="blockquote-footer text-white text-right mt-4">
+                                    <cite title="">
+                                        Partha Chatterjee attended C# .NET
+                                    </cite>
+                            </footer>
+                        </ng-template>                       
+                    </owl-carousel-o>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-6 text-center block-news">
+                <h1 class="block-header mt-3">News</h1>               
+                <div class="px-5 text-center">
+                    <owl-carousel-o [options]="news">
+                        <ng-template carouselSlide>
+                            <p><i class="fa fa-star blink"></i>
+                                Admission open for new session.<br/>
+                                <a routerLink="/contact" class="text-theme">Book now.</a> 
+                            </p>
+                        </ng-template>                      
+                    </owl-carousel-o>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-testimonial"></div>
+</section>
+
+<div class="w-100"></div>

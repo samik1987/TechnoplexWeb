@@ -1,0 +1,178 @@
+<section class="pb-banner position-relative banner-bg">
+    <section class="container">
+        <div class="row">
+            
+        </div>
+    </section>
+    <section class="water-wave">
+        <img class="img-fluid" src="assets/images/wave.svg">
+    </section>
+</section>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12">
+            <h3 class="block-header">Inquery Form</h3>
+
+            <form #inqueryForm="ngForm">
+                <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group ">
+                        <label for="firstName">Fitrst Name <em class="text-danger">*</em></label>
+                        <input type="text" [ngModel]="inquery.firstName" name="firstName" id="firstName" 
+                        class="form-control"  minlength="2"  required #firstName="ngModel" />
+                    <div  [hidden]="firstName.untouched" *ngIf="firstName.errors?.required"
+                        class="text-danger">
+                            First name is required
+                   </div>
+                   <div  class="text-danger" *ngIf="firstName.errors?.minlength">
+                    First Name must be at least 2 characters long.
+                  </div>
+                  <!-- Valid : {{firstName.valid}} ||
+                  Prestine :{{firstName.pristine}} || 
+                  Dirty : {{firstName.dirty}} ||
+                  Length Error : {{firstName.errors?.minlength}} ||
+                  Touched : {{firstName.touched}} -->
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="lastName">Last Name <em class="text-danger">*</em></label>
+                        <input type="text" [ngModel]="inquery.lastName" name="lastName" id="lastName" class="form-control" 
+                        required minlength="2"  #lastName="ngModel" />
+                        <div  [hidden]="lastName.untouched" *ngIf="lastName.errors?.required"
+                        class="text-danger">
+                            Last name is required
+                   </div>
+                   <div  class="text-danger" *ngIf="lastName.errors?.minlength">
+                    Last Name must be at least 2 characters long.
+                  </div>
+                  <!-- Valid : {{lastName.valid}} ||
+                  Prestine :{{lastName.pristine}} || 
+                  Dirty : {{lastName.dirty}} ||
+                  Length Error : {{lastName.errors?.minlength}} ||
+                  Touched : {{lastName.touched}} -->
+                    
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="email">Email <em class="text-danger">*</em></label>
+                        <input type="email" [ngModel]="inquery.email" name="email" id="email" class="form-control" required 
+                            #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
+                        <div class="text-danger" *ngIf="email.errors?.pattern"> This is not a valid Email id.</div>
+                        <div [hidden]="email.untouched" *ngIf="email.errors?.required" class="text-danger">
+                            Email is required
+                        </div>                                
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="mobile">Contact No <em class="text-danger">*</em></label>
+                        <input type="text" [ngModel]="inquery.mobile" name="mobile" id="mobile" class="form-control" 
+                        required minlength="10" maxlength="15"  #mobile="ngModel" numbersOnly pattern="[0-9]*" />
+                        <div [hidden]="mobile.untouched" *ngIf="mobile.errors?.required" class="text-danger">
+                            Enter contact number</div>
+                        <div  class="text-danger" *ngIf="mobile.errors?.minlength">
+                            <span *ngIf="mobile.errors?.pattern">
+                                Enter number.
+                            </span>
+                            Mobile number must be 10 - 15 numbers long. 
+                          </div>
+                          <div  class="text-danger" *ngIf="mobile.errors?.maxlength">
+                            Mobile number maximum 15 numbers long.
+                          </div>
+                          
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="country">Country <em class="text-danger">*</em></label>
+                         <select [ngModel]="inquery.country"  name="country" id="country" class="form-control" required
+                         #country="ngModel" >
+                            <option>India</option>
+                            <option>Bangladesh</option>                            
+                        </select>                        
+                        <div  [hidden]="country.untouched" *ngIf="country.errors?.required"
+                        class="text-danger">
+                            Country is required
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="subject">Subject <em class="text-danger">*</em></label>
+                        <select [ngModel]="inquery.subject"  name="subject" id="subject" class="form-control" required
+                         #subject="ngModel" >
+                            <option>ASP Dot Net</option>
+                            <option>ASP Dot Net MVC</option>
+                            <option>ASP Dot Net Core</option>
+                            <option>Angular</option>
+                            <option>UI Design</option>
+                            <option>Advanced MS Excel</option>
+                        </select>
+                        <div  [hidden]="subject.untouched" *ngIf="subject.errors?.required"
+                        class="text-danger">
+                            Please select subject.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group" [class.has-error]="gender.touched && gender.invalid">
+                        <label for="gender">Gender</label>
+                        <ul class="list-inline">
+                            <li class="list-inline-item radio-inline">
+                                <input type="radio" required #gender="ngModel" value="male" name="gender" id="gender"
+                                    [ngModel]="inquery.gender">  Male
+                            </li>
+                            <li class="list-inline-item" for="gender">
+                               
+                            </li>
+                            <li class="list-inline-item">
+                                <input type="radio" required #gender="ngModel" value="female" name="gender" id="gender"
+                                    [ngModel]="inquery.gender"> Female
+                            </li>
+                            <li class="list-inline-item" for="gender">
+                                
+                            </li>
+                        </ul>
+                        <p class="text-danger" *ngIf="gender.touched && gender.invalid">Gender is required</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea [ngModel]="inquery.message" name="message" id="message" class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+                </div>               
+            
+                <div class="form-group mb-5">
+                    <button type="submit" class="btn bg-theme text-white" [disabled]="!inqueryForm.valid" >Submit</button>
+                </div>
+            </form>           
+        </div>
+    </div>
+
+    
+    <div class="row">   
+        <div class="col-xs-12 col-sm-12 col-md-12 mb-5 order-sm-1">
+            <h5 >Our Address</h5>
+            <address><i class="fa fa-home"></i>
+                Dam House, New Barrackpore, Kolkata -700131, West Bengal, India.
+            </address>
+            <h5>Contact</h5>
+            <p>
+                <a class="text-dark" href="tel:+919748317676"><i class="fa fa-phone"></i> +91- 9748317676 (India) </a><br/>
+                <a class="text-dark" href="tel:+919830291397"><i class="fa fa-phone"></i> +91- 9830291397  (India)</a><br/>
+                <a class="text-dark" href="tel:+8801843606615"><i class="fa fa-phone"></i>+880- 1843606615  (Bangladesh)</a><br/>
+                <a class="text-dark" href="mailto:info@technoplex.co.in"> <i class="fa fa-envelope-o" aria-hidden="true"></i> info@technoplex.co.in</a>
+            </p>
+
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.8755756935457!2d88.43855931484465!3d22.69567533416173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89f27fde64041%3A0xe60717e6fc7c8a5f!2sTechnoplex!5e0!3m2!1sen!2sin!4v1592321484776!5m2!1sen!2sin" 
+                width="100%" height="350" frameborder="0" style="border:1px solid #ddd;" allowfullscreen="" aria-hidden="false" tabindex="0">
+            </iframe>
+        </div>   
+    </div>
+    
+</div>

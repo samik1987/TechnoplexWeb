@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NgxFontAwesomeModule } from 'ngx-font-awesome';
 import { from } from 'rxjs';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -35,6 +36,7 @@ import { from } from 'rxjs';
     BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule,
+    HttpClientModule,
     CarouselModule,
     NgxFontAwesomeModule,
   ],

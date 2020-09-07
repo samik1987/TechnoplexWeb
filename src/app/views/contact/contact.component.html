@@ -147,7 +147,7 @@
                 </div>               
             
                 <div class="form-group mb-5">
-                    <button type="submit" class="btn bg-theme text-white" [disabled]="!inqueryForm.valid" >Submit</button>
+                    <button type="submit" class="btn bg-theme text-white" [disabled]="!inqueryForm.valid" (click)="submit(inqueryForm)" >Submit</button>
                 </div>
             </form>           
         </div>

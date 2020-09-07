@@ -32,7 +32,7 @@ export class ContactComponent implements OnInit {
   submit(inqueryForm){
     debugger;
     this._mailService.SendMail(inqueryForm.value).subscribe((data)=>{   
-        
+       console.log(data);
        alert("Thank For Contacting With US.We Will get back to you soon.");   
        this.rt.navigate(['/']);
        
